@@ -1,0 +1,39 @@
+{/* Flutter animation for letters */}
+
+@keyframes flutter-a {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(-1px, 1px) rotate(-2deg); }
+  50%  { transform: translate(1px, -1px) rotate(1deg); }
+  75%  { transform: translate(0px, 1px) rotate(-1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes flutter-b {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  20%  { transform: translate(1px, 0px) rotate(1deg); }
+  50%  { transform: translate(-1px, 1px) rotate(-2deg); }
+  80%  { transform: translate(1px, -1px) rotate(2deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes flutter-c {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  30%  { transform: translate(0px, -1px) rotate(2deg); }
+  60%  { transform: translate(-1px, 1px) rotate(-1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.flutter-a {
+  animation: flutter-a 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.flutter-b {
+  animation: flutter-b 3.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.flutter-c {
+  animation: flutter-c 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
