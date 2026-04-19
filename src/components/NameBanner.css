@@ -1,4 +1,52 @@
-{/* Flutter animation for letters */}
+.name-banner-wrapper {
+  position: relative;
+  width: clamp(320px, 65vw, 700px);
+  max-width: 90%;
+}
+
+.name-banner-base {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.banner-letter {
+  position: absolute;
+  width: 6%;
+  height: auto;
+}
+
+.letter-g  { top: 28%; left: 10%; width: 10%; }
+.letter-i  { top: 20%; left: 17%; width: 10%; }
+.letter-a1 { top: 24%; left: 24%; width: 10%; }
+.letter-s  { top: 48%; left: 18%; width: 10%; }
+.letter-c  { top: 49%; left: 26%; width: 9%; }
+.letter-o1 { top: 48%; left: 33.5%; width: 10%; }
+.letter-z1 { top: 48%; left: 42%; width: 10%; }
+.letter-z2 { top: 48%; left: 50%; width: 10%; }
+.letter-a2 { top: 48%; left: 59%; width: 10%; }
+.letter-r  { top: 47%; left: 67%; width: 10%; }
+.letter-o2 { top: 48%; left: 74%; width: 10%; }
+
+@media (max-width: 768px) {
+  .name-banner-wrapper {
+    width: clamp(280px, 78vw, 560px);
+  }
+}
+
+@media (max-width: 480px) {
+  .name-banner-wrapper {
+    width: 92vw;
+  }
+
+  .banner-letter {
+    width: 10%;
+  }
+
+  .letter-c {
+    width: 9.2%;
+  }
+}
 
 @keyframes flutter-a {
   0%   { transform: translate(0px, 0px) rotate(0deg); }
@@ -25,15 +73,12 @@
 
 .flutter-a {
   animation: flutter-a 2.8s ease-in-out infinite;
-  transform-origin: center;
 }
 
 .flutter-b {
-  animation: flutter-b 3.4s ease-in-out infinite;
-  transform-origin: center;
+  animation: flutter-b 3.1s ease-in-out infinite;
 }
 
 .flutter-c {
   animation: flutter-c 2.5s ease-in-out infinite;
-  transform-origin: center;
 }
