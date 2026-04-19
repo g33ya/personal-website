@@ -1,15 +1,17 @@
 import './App.css'
-import NameBanner from './components/NameBanner'
+import AboutMe from './components/AboutMe'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
     <>
-      <NameBanner />
-      
-      <div>
-        <p className="text-left">About me, yada yada</p>
-      </div>
+
+      <Navbar />
+
+      <section id="about">
+        <AboutMe />
+      </section>
 
     </>
   )

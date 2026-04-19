@@ -1,5 +1,5 @@
 :root {
-  --text: #6b6375;
+  --text: #46414b;
   --text-h: #08060d;
   --bg: #ffffff;
   --border: #e5e4e7;
@@ -15,7 +15,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 18px/145% var(--mono);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -31,14 +31,19 @@
 }
 
 body {
+  margin: 0;
   background-color: #f0eeea;
   background-image:
-    radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px); /* bullet journal dots! */
+    radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
   background-size: 26px 26px;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 #root {
-  width: 1300px;
+  width: 1700px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
