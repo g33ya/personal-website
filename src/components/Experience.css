@@ -221,16 +221,13 @@
 /* responsive: mobile */
 @media (max-width: 600px) {
   .receipt-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .receipt-shell {
     width: 200px;
-  }
-
-  .experience-banner-wrapper {
-    width: 92vw;
   }
 }
