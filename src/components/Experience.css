@@ -122,17 +122,21 @@
 }
 
 .receipt-expand {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.28s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .receipt-shell.open .receipt-expand {
-  grid-template-rows: 1fr;
+  max-height: 500px;
 }
 
 .receipt-expand-inner {
   overflow: hidden;
+  padding-top: 0;
+}
+
+.receipt-shell.open .receipt-expand-inner {
   padding-top: 0.65rem;
 }
 
@@ -225,9 +229,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
-    grid-template-columns: none;
-    justify-content: initial;
   }
 
   .receipt-shell {
