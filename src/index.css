@@ -9,7 +9,8 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -24,15 +25,31 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  :root {
     font-size: 16px;
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  cursor: url("/public/default_cursor.png") 8 8, auto;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  cursor: url("/default_cursor.png") 8 8, auto;
   background-color: #f0eeea;
   background-image:
     radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
@@ -44,14 +61,14 @@ section {
 }
 
 #root {
-  width: 1700px;
+  width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,
@@ -65,31 +82,39 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+  h1 {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+  h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
 a,
 button {
-  cursor: url("/public/active_cursor.png") 8 8, pointer;
+  cursor: url("/active_cursor.png") 8 8, pointer;
 }
 
 button:active {
-  cursor: url("/public/active_cursor.png") 8 8, pointer;
+  cursor: url("/active_cursor.png") 8 8, pointer;
 }
 
 code,
@@ -106,4 +131,3 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-
