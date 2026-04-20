@@ -1,0 +1,236 @@
+.experience-section {
+  width: min(100%, 1200px);
+  margin: 4rem auto 0;
+  padding: 0 1rem 3rem;
+  text-align: left;
+}
+
+.experience-banner-wrapper {
+  position: relative;
+  width: clamp(320px, 65vw, 700px);
+  max-width: 90%;
+  margin: 0 auto 2rem;
+  aspect-ratio: 700 / 180;
+}
+
+.experience-letter {
+  position: absolute;
+  height: auto;
+}
+
+.experience-banner-wrapper .letter-e1 { top: 26%; left: 8%; width: 8.5%; }
+.experience-banner-wrapper .letter-x  { top: 22%; left: 17%; width: 8.5%; }
+.experience-banner-wrapper .letter-p  { top: 25%; left: 26%; width: 8.5%; }
+.experience-banner-wrapper .letter-e2 { top: 24%; left: 35%; width: 8.5%; }
+.experience-banner-wrapper .letter-r  { top: 25%; left: 44%; width: 8.5%; }
+.experience-banner-wrapper .letter-i  { top: 26%; left: 53%; width: 6.5%; }
+.experience-banner-wrapper .letter-e3 { top: 25%; left: 60%; width: 8.5%; }
+.experience-banner-wrapper .letter-n  { top: 25%; left: 69%; width: 8.5%; }
+.experience-banner-wrapper .letter-c  { top: 25%; left: 78%; width: 8%; }
+.experience-banner-wrapper .letter-e4 { top: 25%; left: 86%; width: 8.5%; }
+
+.receipt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, max-content));
+  justify-content: center;
+  gap: 8rem 8rem;
+  align-items: start;
+}
+
+.receipt-shell {
+  width: 100%;
+}
+
+.receipt-toggle {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.receipt-paper-card {
+  width: 100%;
+  background-image: var(--receipt-paper);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
+  padding: 1rem 0.95rem 0.85rem;
+  color: #2d2d2d;
+  box-sizing: border-box;
+  position: relative;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.08));
+}
+
+.receipt-paper-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+.receipt-paper-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.receipt-top {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.receipt-top h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+.receipt-top p {
+  margin: 0.12rem 0 0;
+  font-size: 0.8rem;
+  color: #4d4d4d;
+}
+
+.receipt-outcome {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.2rem;
+  align-items: start;
+}
+
+.receipt-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.receipt-value {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: #404040;
+}
+
+.receipt-outcome-value {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: #404040;
+  margin-left: 1rem;
+}
+
+.receipt-expand {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+
+.receipt-shell.open .receipt-expand {
+  grid-template-rows: 1fr;
+}
+
+.receipt-expand-inner {
+  overflow: hidden;
+  padding-top: 0.65rem;
+}
+
+.receipt-bullets {
+  margin: 0 0 0.8rem 1rem;
+  padding: 0;
+}
+
+.receipt-bullets li {
+  margin: 0.2rem 0;
+  font-size: 0.73rem;
+  line-height: 1.32;
+  color: #343434;
+}
+
+.receipt-divider {
+  height: 3px;
+  background: #343434;
+  margin: 0.7rem 0 0.65rem;
+}
+
+.receipt-divider-bottom {
+  margin: 0.65rem 0 0.7rem;
+}
+
+.receipt-footer-note {
+  margin: 0;
+  text-align: center;
+  font-size: 0.58rem;
+  line-height: 1.2;
+  color: #4a4a4a;
+}
+
+@keyframes flutter-a {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(-1px, 1px) rotate(-2deg); }
+  50%  { transform: translate(1px, -1px) rotate(1deg); }
+  75%  { transform: translate(0px, 1px) rotate(-1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes flutter-b {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  20%  { transform: translate(1px, 0px) rotate(1deg); }
+  50%  { transform: translate(-1px, 1px) rotate(-2deg); }
+  80%  { transform: translate(1px, -1px) rotate(2deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes flutter-c {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  30%  { transform: translate(0px, -1px) rotate(2deg); }
+  60%  { transform: translate(-1px, 1px) rotate(-1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.flutter-a {
+  animation: flutter-a 2.8s ease-in-out infinite;
+}
+
+.flutter-b {
+  animation: flutter-b 3.1s ease-in-out infinite;
+}
+
+.flutter-c {
+  animation: flutter-c 2.5s ease-in-out infinite;
+}
+
+/* responsive: tablet */
+@media (max-width: 980px) {
+  .receipt-grid {
+    grid-template-columns: repeat(2, minmax(180px, max-content));
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 0 0.75rem 2.5rem;
+  }
+
+  .experience-banner-wrapper {
+    width: clamp(280px, 78vw, 560px);
+  }
+}
+
+/* responsive: mobile */
+@media (max-width: 600px) {
+  .receipt-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  .receipt-shell {
+    width: 200px;
+  }
+
+  .experience-banner-wrapper {
+    width: 92vw;
+  }
+}
