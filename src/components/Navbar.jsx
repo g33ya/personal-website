@@ -14,6 +14,18 @@ export default function Navbar() {
   const navRef = useRef(null)
 
   useEffect(() => {
+    const syncFromHash = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash) setActiveSection(hash)
+    }
+
+    syncFromHash()
+    window.addEventListener('hashchange', syncFromHash)
+
+    return () => window.removeEventListener('hashchange', syncFromHash)
+  }, [])
+
+  useEffect(() => {
     const sections = navItems
       .map((item) => document.getElementById(item.id))
       .filter(Boolean)
@@ -30,16 +42,14 @@ export default function Navbar() {
       },
       {
         root: null,
-        rootMargin: '-20% 0px -55% 0px',
-        threshold: [0.2, 0.4, 0.6],
+        rootMargin: '-12% 0px -55% 0px',
+        threshold: 0.05,
       }
     )
 
     sections.forEach((section) => observer.observe(section))
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section))
-    }
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -61,6 +71,7 @@ export default function Navbar() {
             key={item.id}
             href={`#${item.id}`}
             className={`navbar-link ${activeSection === item.id ? 'active' : ''}`}
+            onClick={() => setActiveSection(item.id)}
           >
             {item.label}
           </a>
