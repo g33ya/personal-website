@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('about')
+  const navRef = useRef(null)
 
   useEffect(() => {
     const sections = navItems
@@ -41,9 +42,20 @@ export default function Navbar() {
     }
   }, [])
 
+  useEffect(() => {
+    const activeLink = navRef.current?.querySelector('.navbar-link.active')
+    if (activeLink) {
+      activeLink.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      })
+    }
+  }, [activeSection])
+
   return (
     <div className="navbar-shell">
-      <nav className="navbar">
+      <nav className="navbar" ref={navRef}>
         {navItems.map((item) => (
           <a
             key={item.id}
