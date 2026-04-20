@@ -31,6 +31,7 @@
 }
 
 body {
+  cursor: url("/public/default_cursor.png") 8 8, auto;
   margin: 0;
   background-color: #f0eeea;
   background-image:
@@ -80,6 +81,15 @@ h2 {
 }
 p {
   margin: 0;
+}
+
+a,
+button {
+  cursor: url("/public/active_cursor.png") 8 8, pointer;
+}
+
+button:active {
+  cursor: url("/public/active_cursor.png") 8 8, pointer;
 }
 
 code,
