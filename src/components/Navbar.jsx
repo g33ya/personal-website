@@ -14,15 +14,17 @@ export default function Navbar() {
   const navRef = useRef(null)
 
   useEffect(() => {
-    const syncFromHash = () => {
+    const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '')
-      if (hash) setActiveSection(hash)
+      if (hash) {
+        setActiveSection(hash)
+      }
     }
 
-    syncFromHash()
-    window.addEventListener('hashchange', syncFromHash)
+    handleHashChange()
+    window.addEventListener('hashchange', handleHashChange)
 
-    return () => window.removeEventListener('hashchange', syncFromHash)
+    return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export default function Navbar() {
       },
       {
         root: null,
-        rootMargin: '-12% 0px -55% 0px',
+        rootMargin: '-15% 0px -55% 0px',
         threshold: 0.05,
       }
     )
