@@ -1,6 +1,6 @@
 .home-page {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: clamp(1rem, 3vw, 2.5rem);
 }
 
