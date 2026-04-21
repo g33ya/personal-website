@@ -3,6 +3,7 @@ import AboutMe from './components/AboutMe'
 import Navbar from './components/Navbar'
 import Experience from './components/Experience'
 import divider from './assets/divider.png'
+import Projects from './components/Projects'
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
 
       <img src={divider} alt="" className="divider" />
 
+      <section id="projects">
+        <Projects />
+      </section>
 
     </>
   )

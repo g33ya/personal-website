@@ -1,0 +1,34 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.projects-section {
+  width: min(100%, 1200px);
+  margin: -1rem auto 0;
+  padding: 0 1rem 3rem;
+  text-align: left;
+}
+
+.projects-banner-wrapper {
+  position: relative;
+  width: clamp(320px, 65vw, 700px);
+  max-width: 90%;
+  margin: 0 auto 2rem;
+  aspect-ratio: 700 / 180;
+  left: 3%;
+}
+
+.projects-letter {
+  position: absolute;
+  height: auto;
+}
+
+.projects-banner-wrapper .letter-p { top: 26%; left: 8%; width: 11%; }
+.projects-banner-wrapper .letter-r  { top: 22%; left: 17%; width: 11%; }
+.projects-banner-wrapper .letter-o  { top: 25%; left: 26%; width: 11%; }
+.projects-banner-wrapper .letter-j { top: 24%; left: 35%; width: 11%; }
+.projects-banner-wrapper .letter-e  { top: 25%; left: 43%; width: 11%; }
+.projects-banner-wrapper .letter-c  { top: 25%; left: 52%; width: 11%; }
+.projects-banner-wrapper .letter-t { top: 22%; left: 62%; width: 11%; }
+.projects-banner-wrapper .letter-s  { top: 25%; left: 72%; width: 11%; }
