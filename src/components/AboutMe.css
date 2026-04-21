@@ -1,8 +1,8 @@
 .home-page {
   position: relative;
-  min-height: 115vh;
+  min-height: 100vh;
   padding: clamp(1rem, 3vw, 2.5rem);
-  margin-top: 1.5rem;
+  margin-top: .5rem;
 }
 
 .home-page::before {
@@ -13,7 +13,7 @@
   background: url("/repeating_sketch_background.png") repeat;
   background-size: 260px;
 
-  opacity: 0.3;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 0;
 }
@@ -46,8 +46,9 @@
 
 .left-collage {
   position: relative;
-  width: min(100%, 1000px);
+  width: min(100%, 800px);
   min-height: clamp(430px, 52vw, 620px);
+  left: 10%;
 }
 
 .plaid-wrap {
@@ -138,6 +139,7 @@
   transform: rotate(var(--rotation));
   filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.12));
   transition: transform 0.28s ease, filter 0.28s ease;
+  scale: .8;
 }
 
 .polaroid:hover {
@@ -148,15 +150,15 @@
 
 .polaroid-pink {
   --rotation: -12deg;
-  bottom: -45%;
-  left: -40%;
+  bottom: -35%;
+  left: -50%;
   z-index: 5;
 }
 
 .polaroid-green {
   --rotation: 10deg;
-  top: 14%;
-  left: -10%;
+  top: 18%;
+  left: -20%;
   z-index: 4;
 }
 
@@ -176,7 +178,7 @@
   }
 
   .plaid-wrap {
-    left: 2%;
+    left: 1%;
     top: 5.75rem;
     width: 92%;
   }
@@ -238,6 +240,7 @@
   .home-page {
     padding: 0.5rem;
     min-height: 80vh;
+    margin-top: 2rem;
   }
 
   .hero-card {
@@ -258,6 +261,7 @@
     width: 100%;
     min-height: 420px;
     overflow: hidden;
+    left: 0%;
   }
 
   .plaid-wrap {
