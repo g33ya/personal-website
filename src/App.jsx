@@ -28,6 +28,8 @@ function App() {
         <Projects />
       </section>
 
+      <img src={divider} alt="" className="divider" />
+
     </>
   )
 }
