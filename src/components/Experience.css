@@ -28,10 +28,10 @@ html {
 .experience-banner-wrapper .letter-p  { top: 25%; left: 26%; width: 8.5%; }
 .experience-banner-wrapper .letter-e2 { top: 24%; left: 35%; width: 8.5%; }
 .experience-banner-wrapper .letter-r  { top: 25%; left: 44%; width: 8.5%; }
-.experience-banner-wrapper .letter-i  { top: 26%; left: 53%; width: 8.5%; }
-.experience-banner-wrapper .letter-e3 { top: 25%; left: 60%; width: 8.5%; }
-.experience-banner-wrapper .letter-n  { top: 25%; left: 69%; width: 8.5%; }
-.experience-banner-wrapper .letter-c  { top: 25%; left: 78%; width: 8%; }
+.experience-banner-wrapper .letter-i  { top: 20%; left: 50%; width: 9.5%; }
+.experience-banner-wrapper .letter-e3 { top: 25%; left: 58%; width: 8.5%; }
+.experience-banner-wrapper .letter-n  { top: 20%; left: 67%; width: 10%; }
+.experience-banner-wrapper .letter-c  { top: 22%; left: 76%; width: 10%; }
 .experience-banner-wrapper .letter-e4 { top: 25%; left: 86%; width: 8.5%; }
 
 .receipt-grid {
