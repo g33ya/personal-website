@@ -16,6 +16,7 @@ html {
   max-width: 90%;
   margin: 0 auto 2rem;
   aspect-ratio: 700 / 180;
+  left: -1%;
 }
 
 .experience-letter {
