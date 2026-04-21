@@ -237,6 +237,7 @@
 @media (max-width: 600px) {
   .home-page {
     padding: 0.5rem;
+    min-height: 80vh;
   }
 
   .hero-card {
