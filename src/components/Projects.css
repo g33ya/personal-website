@@ -67,7 +67,7 @@ html {
 }
 
 .project-card {
-  width: min(100%, 220px);
+  width: min(100%, 300px);
   border: none;
   background: transparent;
   padding: 0;
