@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(180px, max-content));
   justify-content: center;
-  gap: 8rem 8rem;
+  gap: 2rem 2rem;
   align-items: start;
 }
 
@@ -57,7 +57,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% 100%;
-  padding: 1rem 0.95rem 0.85rem;
+  padding: 0.7rem 0.75rem 0.6rem;
   color: #2d2d2d;
   box-sizing: border-box;
   position: relative;
@@ -79,19 +79,19 @@
 
 .receipt-top {
   text-align: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .receipt-top h3 {
   margin: 0;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #2f2f2f;
 }
 
 .receipt-top p {
-  margin: 0.12rem 0 0;
-  font-size: 0.8rem;
+  margin: 0.08rem 0 0;
+  font-size: 0.75rem;
   color: #4d4d4d;
 }
 
@@ -103,19 +103,19 @@
 }
 
 .receipt-label {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #2f2f2f;
 }
 
 .receipt-value {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   line-height: 1.25;
   color: #404040;
 }
 
 .receipt-outcome-value {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   line-height: 1.25;
   color: #404040;
   margin-left: 1rem;
@@ -124,19 +124,15 @@
 .receipt-expand {
   max-height: 0;
   opacity: 0;
-  transform: translateY(-6px);
   overflow: hidden;
-
   transition:
     max-height 0.35s ease,
-    opacity 0.25s ease,
-    transform 0.25s ease;
+    opacity 0.25s ease;
 }
 
 .receipt-shell.open .receipt-expand {
-  max-height: 500px; 
+  max-height: 500px;
   opacity: 1;
-  transform: translateY(0);
 }
 
 .receipt-expand-inner {
@@ -212,7 +208,7 @@
   animation: flutter-c 2.5s ease-in-out infinite;
 }
 
-/* responsive: tablet */
+/* tablet */
 @media (max-width: 980px) {
   .receipt-grid {
     grid-template-columns: repeat(2, minmax(180px, max-content));
@@ -229,16 +225,67 @@
   }
 }
 
-/* responsive: mobile */
+/* mobile */
 @media (max-width: 600px) {
   .receipt-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    display: block !important;
   }
 
   .receipt-shell {
+    display: block;
     width: 200px;
+    margin: 0 auto 1rem !important;
+  }
+
+  .receipt-shell:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .receipt-paper-card {
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem 0.75rem 0.6rem;
+  }
+
+  .receipt-top {
+    margin-bottom: 0.35rem;
+  }
+
+  .receipt-top h3 {
+    font-size: 0.88rem;
+  }
+
+  .receipt-top p {
+    font-size: 0.72rem;
+  }
+
+  .receipt-label,
+  .receipt-value,
+  .receipt-outcome-value {
+    font-size: 0.68rem;
+  }
+
+  .receipt-expand {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.2s ease;
+  }
+
+  .receipt-shell.open .receipt-expand {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .receipt-expand-inner {
+    padding-top: 0;
+  }
+
+  .receipt-shell.open .receipt-expand-inner {
+    padding-top: 0.65rem;
+  }
+
+  .experience-banner-wrapper {
+    width: 92vw;
   }
 }
