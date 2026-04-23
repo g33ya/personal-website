@@ -6,7 +6,8 @@ html {
   position: fixed;
   top: 1rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.85);
+  transform-origin: top center;
   z-index: 1000;
   width: max-content;
   max-width: calc(100vw - 1rem);
