@@ -183,6 +183,11 @@ html {
   color: #4a4a4a;
 }
 
+.highlight {
+  color: #d97a9d; 
+  font-weight: 700;
+}
+
 @keyframes flutter-a {
   0%   { transform: translate(0px, 0px) rotate(0deg); }
   25%  { transform: translate(-1px, 1px) rotate(-2deg); }

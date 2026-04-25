@@ -24,13 +24,28 @@ const experiences = [
     position: 'Camera & Photos Tools Experience Intern',
     date: 'May 2025 – August 2025',
     bullets: [
-      'Built an AI Insights feature to generate qualitative test performance analysis for a 700+ user platform',
-      'Led the full development lifecycle, defining requirements, designing system architecture, and implementing frontend and backend components in a React-based UI with API integration',
-      'Designed and iterated on LLM-driven analysis workflows to identify key concerns, improvements, and regressions across test cycles',
+      <>
+        Built an <span className="highlight">AI Insights feature</span> to generate qualitative test analysis for a <span className="highlight">700+ user platform</span>
+      </>,
+      <>
+        Led the <span className="highlight">full development lifecycle</span>, designing <span className="highlight">system architecture</span> and implementing a <span className="highlight">React-based UI</span> with API integration
+      </>,
+      <>
+        Designed <span className="highlight">LLM-driven workflows</span> to identify key concerns, improvements, and regressions across test cycles
+      </>,
     ],
-    outcome: 'Automated qualitative test analysis, reducing hours of manual review to seconds while improving visibility into performance trends through LLM integration.',
-    takeaway: 'My takeaways: Strengthened my ability to build end-to-end product features, lead development across the stack, and design AI-driven systems with real user impact.',
+    outcome: (
+      <>
+        Automated qualitative test analysis, reducing <span className="highlight">hours of manual work to seconds</span> and improving visibility into performance trends
+      </>
+    ),
+    takeaway: (
+      <>
+        Strengthened my ability to build <span className="highlight">end-to-end product features</span>, lead development, and design <span className="highlight">AI-driven systems</span>
+      </>
+    ),
   },
+
   {
     id: 2,
     company: 'M&T Bank',
@@ -38,13 +53,28 @@ const experiences = [
     position: 'Technology Intern',
     date: 'June 2024 – August 2024',
     bullets: [
-      'Migrated two full-stack applications across five environments from Azure DevOps to GitLab, implementing CI/CD pipelines and automated smoke testing for internal and external systems',
-      'Resolved 400+ security vulnerabilities identified through Veracode by integrating automated scanning and testing workflows',  
-      'Facilitated a discussion with Delaware Governor John Carney, representing M&T Bank’s 2024 intern cohort in a multi-company event',
+      <>
+        Migrated <span className="highlight">2 full-stack applications</span> across <span className="highlight">5 environments</span> using CI/CD pipelines and automated testing
+      </>,
+      <>
+        Resolved <span className="highlight">400+ security vulnerabilities</span> through integrated scanning and testing workflows
+      </>,
+      <>
+        Represented the intern cohort by facilitating a discussion with <span className="highlight">Delaware Governor John Carney</span>
+      </>,
     ],
-    outcome: 'Improved deployment reliability and security by automating testing and vulnerability resolution, while ensuring seamless migration across environments.',
-    takeaway: 'My takeaways:Gained experience working within large-scale systems, improving code security, and collaborating across teams to deliver reliable and maintainable software.',
+    outcome: (
+      <>
+        Improved <span className="highlight">deployment reliability and security</span> through automation and streamlined workflows
+      </>
+    ),
+    takeaway: (
+      <>
+        Gained experience working with <span className="highlight">large-scale systems</span> and improving <span className="highlight">code security</span> in production environments
+      </>
+    ),
   },
+
   {
     id: 3,
     company: 'University of Delaware',
@@ -52,12 +82,25 @@ const experiences = [
     position: 'CubeSat Satellite Ground Software Developer',
     date: 'June 2024 – May 2025',
     bullets: [
-      'Led the iterative design of a PyQt-based GUI for satellite ground software, collaborating across teams to ensure intuitive navigation and effective data visualization',
-      'Developed communication protocols, command structures, and packet formats using Python and C to enable reliable data transmission between ground and flight systems',
+      <>
+        Led the design of a <span className="highlight">PyQt-based GUI</span> for satellite ground software with intuitive navigation and data visualization
+      </>,
+      <>
+        Developed <span className="highlight">communication protocols</span> and packet structures using <span className="highlight">Python and C</span>
+      </>,
     ],
-    outcome: 'Enabled seamless communication between ground and flight software, improving system integration and ensuring reliable data flow throughout the mission lifecycle.',
-    takeaway: 'My takeaways: Strengthened my understanding of systems-level thinking, real-time data communication, and designing software for complex, mission-critical environments.',
+    outcome: (
+      <>
+        Enabled <span className="highlight">reliable data transmission</span> between ground and flight systems across the mission lifecycle
+      </>
+    ),
+    takeaway: (
+      <>
+        Strengthened my understanding of <span className="highlight">systems-level thinking</span> and real-time communication
+      </>
+    ),
   },
+
   {
     id: 4,
     company: 'HenHacks Hackathon',
@@ -65,12 +108,26 @@ const experiences = [
     position: 'Head Coordinator',
     date: 'September 2022 – May 2026',
     bullets: [
-      'Served as Head Coordinator for HenHacks 2025, leading planning and execution for a 500+ attendee hackathon across 53 universities',
-      'Directed a team of 22 organizers across four committees, managing logistics, sponsorship outreach, and cross-functional coordination',
-      'Acted as primary point of contact for 50+ prospective sponsors, driving partnerships and event support',
+      <>
+        Led planning for a <span className="highlight">500+ attendee</span> hackathon across <span className="highlight">53 universities</span>
+      </>,
+      <>
+        Directed a team of <span className="highlight">22 organizers</span> across multiple committees
+      </>,
+      <>
+        Managed relationships with <span className="highlight">50+ sponsors</span> to support event execution
+      </>,
     ],
-    outcome: 'Delivered a large-scale event with 98% attendee satisfaction, successfully coordinating logistics, sponsorships, and team execution',
-    takeaway: 'My takeaways:Developed strong leadership and organizational skills, learning how to manage teams, stakeholders, and high-impact events under tight timelines.',
+    outcome: (
+      <>
+        Delivered an event with <span className="highlight">98% attendee satisfaction</span>
+      </>
+    ),
+    takeaway: (
+      <>
+        Developed strong <span className="highlight">leadership and organizational skills</span> managing teams and large-scale events
+      </>
+    ),
   },
 ]
 
@@ -134,11 +191,10 @@ function ReceiptCard({ company, location, position, date, bullets, outcome, take
               </div>
 
               <div className="receipt-divider receipt-divider-bottom" />
-              
+
               <div className="receipt-footer-note">
                 <p>{takeaway}</p>
               </div>
-
             </div>
           </div>
         </div>
