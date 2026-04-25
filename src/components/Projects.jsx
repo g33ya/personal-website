@@ -1,8 +1,7 @@
-import letterAssets from '../letterAssets'
-import './Projects.css'
-import { useState } from "react";
-/*import { Link } from "react-router-dom";*/
+import letterAssets from "../letterAssets";
 import "./Projects.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import soundMate from "../assets/project_stamps/soundmate_stamp.png";
 import taskNest from "../assets/project_stamps/task_nest_stamp.png";
@@ -12,15 +11,15 @@ import callCompanion from "../assets/project_stamps/call_companion_stamp.png";
 import perceptionExperiment from "../assets/project_stamps/perception_experiment_stamp.png";
 
 const letters = [
-  { key: 'greenWhiteP', alt: 'P', className: 'letter-p flutter-a' },
-  { key: 'greenWhiteR', alt: 'R', className: 'letter-r flutter-b' },
-  { key: 'greenWhiteO', alt: 'O', className: 'letter-o flutter-c' },
-  { key: 'greenWhiteJ', alt: 'J', className: 'letter-j flutter-a' },
-  { key: 'greenWhiteE', alt: 'E', className: 'letter-e flutter-b' },
-  { key: 'greenWhiteC', alt: 'C', className: 'letter-c flutter-c' },
-  { key: 'greenWhiteT', alt: 'T', className: 'letter-t flutter-a' },
-  { key: 'greenWhiteS', alt: 'S', className: 'letter-s flutter-b' },
-]
+  { key: "greenWhiteP", alt: "P", className: "letter-p flutter-a" },
+  { key: "greenWhiteR", alt: "R", className: "letter-r flutter-b" },
+  { key: "greenWhiteO", alt: "O", className: "letter-o flutter-c" },
+  { key: "greenWhiteJ", alt: "J", className: "letter-j flutter-a" },
+  { key: "greenWhiteE", alt: "E", className: "letter-e flutter-b" },
+  { key: "greenWhiteC", alt: "C", className: "letter-c flutter-c" },
+  { key: "greenWhiteT", alt: "T", className: "letter-t flutter-a" },
+  { key: "greenWhiteS", alt: "S", className: "letter-s flutter-b" },
+];
 
 const projects = [
   {
@@ -46,36 +45,36 @@ const projects = [
     image: careerCatalyst,
     title: "Career Catalyst",
     description:
-      "A PyQt interface designed to display live flight data from embedded flight software systems.",
+      "An AI-powered career quiz that generates structured career reports based on user input.",
     tilt: "tilt-left-2",
-    path: "/projects/satellite-gui",
+    path: "/projects/career-catalyst",
   },
   {
     id: 4,
     image: bubbleUp,
     title: "Bubble Up",
     description:
-      "Creative event organization work spanning logistics, branding, spaces, and participant experience.",
+      "A playful interactive project focused on engaging users through light, polished UI interactions.",
     tilt: "tilt-right-2",
-    path: "/projects/henhacks",
+    path: "/projects/bubble-up",
   },
   {
     id: 5,
     image: callCompanion,
     title: "Call Companion",
     description:
-      "A Discord bot that shares office hours in a calendar-style format with reminders and filters.",
+      "An assistive Android application that helps users track key information during phone calls.",
     tilt: "tilt-left-3",
-    path: "/projects/office-hours-bot",
+    path: "/projects/call-companion",
   },
   {
     id: 6,
     image: perceptionExperiment,
     title: "Perception Experiment",
     description:
-      "A scrapbook-inspired personal portfolio with custom sections.",
+      "An interactive experiment exploring how people interpret visual information and make judgments.",
     tilt: "tilt-right-3",
-    path: "/projects/portfolio",
+    path: "/projects/perception-experiment",
   },
 ];
 
@@ -91,7 +90,7 @@ function ProjectsBanner() {
         />
       ))}
     </div>
-  )
+  );
 }
 
 export default function Projects() {
@@ -132,13 +131,13 @@ export default function Projects() {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
 
-                  <a
-  href={project.path}
-  className="project-link"
-  onClick={(e) => e.stopPropagation()}
->
-  view project →
-</a>
+                  <Link
+                    to={project.path}
+                    className="project-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    view project →
+                  </Link>
                 </div>
               </div>
             </button>

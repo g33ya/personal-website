@@ -1,4 +1,6 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import AboutMe from './components/AboutMe'
 import Navbar from './components/Navbar'
 import Experience from './components/Experience'
@@ -6,12 +8,11 @@ import Skills from './components/Skills'
 import divider from './assets/divider.png'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import ComingSoon from './components/ComingSoon'
 
-function App() {
-
+function MainPage() {
   return (
     <>
-
       <Navbar />
 
       <section id="about">
@@ -45,4 +46,14 @@ function App() {
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+
+        <Route path="/projects/:projectId" element={<ComingSoon />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
