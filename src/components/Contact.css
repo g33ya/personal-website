@@ -24,14 +24,14 @@ html {
   height: auto;
 }
 
-.contact-banner-wrapper .letter-c1 { top: 26%; left: 12%; width: 12%; }
-.contact-banner-wrapper .letter-o  { top: 26%; left: 22%; width: 12%; }
-.contact-banner-wrapper .letter-n  { top: 29%; left: 33%; width: 11%; }
-.contact-banner-wrapper .letter-t1 { top: 23%; left: 43%; width: 12%; }
-.contact-banner-wrapper .letter-a  { top: 28%; left: 54%; width: 11%; }
-.contact-banner-wrapper .letter-c2  { top: 26%; left: 64%; width: 12%; }
-.contact-banner-wrapper .letter-t2 { top: 23%; left: 74%; width: 12%; }
-.contact-banner-wrapper .letter-point  { top: 20%; left: 84%; width: 12%; }
+.contact-banner-wrapper .letter-c1 { top: 26%; left: 12%; width: 14%; }
+.contact-banner-wrapper .letter-o  { top: 26%; left: 22%; width: 14%; }
+.contact-banner-wrapper .letter-n  { top: 29%; left: 33%; width: 13%; }
+.contact-banner-wrapper .letter-t1 { top: 23%; left: 43%; width: 14%; }
+.contact-banner-wrapper .letter-a  { top: 28%; left: 54%; width: 13%; }
+.contact-banner-wrapper .letter-c2  { top: 26%; left: 64%; width: 14%; }
+.contact-banner-wrapper .letter-t2 { top: 23%; left: 74%; width: 14%; }
+.contact-banner-wrapper .letter-point  { top: 20%; left: 84%; width: 14%; }
 
 .contact-kicker {
   margin: 0 0 0.35rem;
