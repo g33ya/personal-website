@@ -23,7 +23,12 @@ export default function Home() {
                 <NameBanner />
               </div>
 
+              
               <div className="intro-note">
+                <div className="availability-pill hero-pill">
+                  <span className="availability-dot" />
+                  Available May 2026
+                </div>
                 <p>
                   Hi! My name is Gia and I am a student at UD. I'm going to add
                   an actual description here eventually, but for now i'll just fill
@@ -36,7 +41,7 @@ export default function Home() {
                     ★ [my projects]
                   </a>
                   <a
-                    href="/resume.pdf"
+                    href="/GiovannaScozzaro_Resume.pdf"
                     className="scrapbook-link"
                     target="_blank"
                     rel="noreferrer"
