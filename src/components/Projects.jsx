@@ -25,20 +25,20 @@ const projects = [
   {
     id: 1,
     image: soundMate,
-    title: "Rhino Alert Plugin",
+    title: "SoundMate",
     description:
-      "A Mission Planner plugin for logging and reviewing rhino sightings through a custom interface.",
+      "An app that connects students through their Spotify listening statistics, acting as both a social connector and an event platform.",
     tilt: "tilt-left-1",
-    path: "/projects/rhino-alert",
+    path: "/projects/soundmate",
   },
   {
     id: 2,
     image: taskNest,
-    title: "Boba Shop Game",
+    title: "TaskNest",
     description:
-      "A narrative game about imposter syndrome that encourages self-compassion and reflection.",
+      "A task management app designed to help users organize to-dos across multiple lists.",
     tilt: "tilt-right-1",
-    path: "/projects/boba-shop-game",
+    path: "/projects/tasknest",
   },
   {
     id: 3,
@@ -72,7 +72,7 @@ const projects = [
     image: perceptionExperiment,
     title: "Perception Experiment",
     description:
-      "An interactive experiment exploring how people interpret visual information and make judgments.",
+      "An experiment exploring how people interpret visual information and make judgments.",
     tilt: "tilt-right-3",
     path: "/projects/perception-experiment",
   },
