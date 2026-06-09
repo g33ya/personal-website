@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import letterAssets from '../letterAssets'
+import letterAssets from "../utils/letterAssets";
 import receiptPaper from '../assets/receipt_paper.png'
 import './Experience.css'
 

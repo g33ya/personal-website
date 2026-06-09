@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
-import letterAssets from '../letterAssets'
+import letterAssets from "../utils/letterAssets";
 import './Skills.css'
 import indexCard from "../assets/index_card.png";
-import languagesSticker from "../assets/languages_sticker.png";
-import frontendSticker from "../assets/frontend_sticker.png";
-import backendSticker from "../assets/backend_sticker.png";
-import aiSticker from "../assets/ai_sticker.png";
+import languagesSticker from "../assets/skills/languages_sticker.png";
+import frontendSticker from "../assets/skills/frontend_sticker.png";
+import backendSticker from "../assets/skills/backend_sticker.png";
+import aiSticker from "../assets/skills/ai_sticker.png";
 
 
 const letters = [
