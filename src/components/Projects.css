@@ -82,7 +82,7 @@ html {
 .project-card-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.15 / 1;
+  aspect-ratio: 1.5 / 1;
   transform-style: preserve-3d;
   transition: transform 0.65s ease;
 }
@@ -277,7 +277,7 @@ html {
   }
 
   .project-card-back h3 {
-    font-size: 1.25rem;
+    font-size: .75rem;
   }
 
   .project-card-back p {
