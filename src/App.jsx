@@ -9,6 +9,7 @@ import divider from './assets/divider.png'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ComingSoon from './components/ComingSoon'
+import ProjectPage from './components/ProjectPage';
 
 function MainPage() {
   return (
@@ -52,7 +53,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
 
-        <Route path="/projects/:projectId" element={<ComingSoon />} />
+        <Route path="/projects/:projectId" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>
   )
