@@ -4,6 +4,10 @@ import pinkPolaroid from '../assets/cami_and_me.png'
 import greenPolaroid from '../assets/solo_photo.png'
 import plaidPaperCutout from '../assets/plaid_paper_cutout.png'
 
+const currentMonth = new Date().toLocaleString("en-US", {
+  month: "long",
+});
+
 export default function Home() {
   return (
     <div className="home-page">
@@ -27,7 +31,7 @@ export default function Home() {
               <div className="intro-note">
                 <div className="availability-pill hero-pill">
                   <span className="availability-dot" />
-                  Available May 2026
+                  Available {currentMonth} 2026
                 </div>
                 <p>
                   Hi! My name is Gia and I am a student at UD. I'm going to add

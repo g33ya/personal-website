@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import letterAssets from "../letterAssets";
+import letterAssets from "../utils/letterAssets";
 import "./Contact.css";
 
 const letters = [
@@ -13,6 +13,10 @@ const letters = [
   { key: 'lpinkWhiteT', alt: 'T', className: 'letter-t2 flutter-a' },
   { key: 'lpinkWhitePOINT', alt: '!', className: 'letter-point flutter-b' },
 ]
+
+const currentMonth = new Date().toLocaleString("en-US", {
+  month: "long",
+});
 
 function ContactBanner() {
   return (
@@ -199,7 +203,7 @@ export default function Contact() {
           <div className="availability-note">
             <div className="availability-pill">
               <span className="availability-dot" />
-              Available May 2026
+              Available {currentMonth} 2026
             </div>
             <p>
               ♡
