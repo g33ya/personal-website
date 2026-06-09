@@ -1,14 +1,8 @@
-import letterAssets from "../letterAssets";
+import letterAssets from "../utils/letterAssets";
 import "./Projects.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-import soundMate from "../assets/project_stamps/soundmate_stamp.png";
-import taskNest from "../assets/project_stamps/task_nest_stamp.png";
-import careerCatalyst from "../assets/project_stamps/career_catalyst_stamp.png";
-import bubbleUp from "../assets/project_stamps/bubble_up_stamp.png";
-import callCompanion from "../assets/project_stamps/call_companion_stamp.png";
-import perceptionExperiment from "../assets/project_stamps/perception_experiment_stamp.png";
+import { projects } from "../data/projects";
 
 const letters = [
   { key: "greenWhiteP", alt: "P", className: "letter-p flutter-a" },
@@ -21,61 +15,13 @@ const letters = [
   { key: "greenWhiteS", alt: "S", className: "letter-s flutter-b" },
 ];
 
-const projects = [
-  {
-    id: 1,
-    image: soundMate,
-    title: "SoundMate",
-    description:
-      "An app that connects students through their Spotify listening statistics, acting as both a social connector and an event platform.",
-    tilt: "tilt-left-1",
-    path: "/projects/soundmate",
-  },
-  {
-    id: 2,
-    image: taskNest,
-    title: "TaskNest",
-    description:
-      "A task management app designed to help users organize to-dos across multiple lists.",
-    tilt: "tilt-right-1",
-    path: "/projects/tasknest",
-  },
-  {
-    id: 3,
-    image: careerCatalyst,
-    title: "Career Catalyst",
-    description:
-      "An AI-powered career quiz that generates structured career reports based on user input.",
-    tilt: "tilt-left-2",
-    path: "/projects/career-catalyst",
-  },
-  {
-    id: 4,
-    image: bubbleUp,
-    title: "Bubble Up",
-    description:
-      "A playful interactive project focused on engaging users through light, polished UI interactions.",
-    tilt: "tilt-right-2",
-    path: "/projects/bubble-up",
-  },
-  {
-    id: 5,
-    image: callCompanion,
-    title: "Call Companion",
-    description:
-      "An assistive Android application that helps users track key information during phone calls.",
-    tilt: "tilt-left-3",
-    path: "/projects/call-companion",
-  },
-  {
-    id: 6,
-    image: perceptionExperiment,
-    title: "Perception Experiment",
-    description:
-      "An experiment exploring how people interpret visual information and make judgments.",
-    tilt: "tilt-right-3",
-    path: "/projects/perception-experiment",
-  },
+const tilts = [
+  "tilt-left-1",
+  "tilt-right-1",
+  "tilt-left-2",
+  "tilt-right-2",
+  "tilt-left-3",
+  "tilt-right-3",
 ];
 
 function ProjectsBanner() {
@@ -107,14 +53,14 @@ export default function Projects() {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           const isFlipped = flippedId === project.id;
 
           return (
             <button
               key={project.id}
               type="button"
-              className={`project-card ${project.tilt} ${
+              className={`project-card ${tilts[index % tilts.length]} ${
                 isFlipped ? "is-flipped" : ""
               }`}
               onClick={() => handleFlip(project.id)}
@@ -123,7 +69,7 @@ export default function Projects() {
             >
               <div className="project-card-inner">
                 <div className="project-card-face project-card-front">
-                  <img src={project.image} alt={project.title} />
+                  <img src={project.stamp} alt={project.title} />
                   <span className="project-front-note">tap for preview</span>
                 </div>
 
@@ -132,7 +78,7 @@ export default function Projects() {
                   <p>{project.description}</p>
 
                   <Link
-                    to={project.path}
+                    to={`/projects/${project.id}`}
                     className="project-link"
                     onClick={(e) => e.stopPropagation()}
                   >
