@@ -6,7 +6,7 @@ import languagesSticker from "../assets/skills/languages_sticker.png";
 import frontendSticker from "../assets/skills/frontend_sticker.png";
 import backendSticker from "../assets/skills/backend_sticker.png";
 import aiSticker from "../assets/skills/ai_sticker.png";
-import deskTexture from "../assets/skills/desk_texture.jpg";
+import deskTexture from "../assets/skills/desk_texture.webp";
 
 
 const letters = [

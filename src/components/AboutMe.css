@@ -291,11 +291,11 @@
 
   .intro-note {
     left: 9%;
-    top: 25%;
+    top: 18%;
     width: 76%;
     padding-left: 0.65rem;
     border-left: 3px solid rgba(90, 90, 90, 0.5);
-    scale: .95;
+    scale: .85;
   }
 
   .intro-note p {
