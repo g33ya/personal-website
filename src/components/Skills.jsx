@@ -6,6 +6,7 @@ import languagesSticker from "../assets/skills/languages_sticker.png";
 import frontendSticker from "../assets/skills/frontend_sticker.png";
 import backendSticker from "../assets/skills/backend_sticker.png";
 import aiSticker from "../assets/skills/ai_sticker.png";
+import deskTexture from "../assets/skills/desk_texture.jpg";
 
 
 const letters = [
@@ -111,6 +112,10 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills-section">
+      <div
+        className="skills-desk"
+        style={{ "--desk-texture": `url(${deskTexture})` }}
+      >
       <SkillsBanner />
 
       <div className="skills-grid">
@@ -155,6 +160,7 @@ export default function Skills() {
             </div>
           </article>
         ))}
+      </div>
       </div>
     </section>
   );
