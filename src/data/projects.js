@@ -1,14 +1,12 @@
 import loadProjectImages from '../utils/imageLoader';
 
 import soundmateStamp from '../assets/project_stamps/soundmate_stamp.png';
-import taskNestStamp from '../assets/project_stamps/tasknest_stamp.png';
 import callCompanionStamp from '../assets/project_stamps/call_companion_stamp.png';
 import bubbleUpStamp from '../assets/project_stamps/bubble_up_stamp.png';
 import careerCatalystStamp from '../assets/project_stamps/career_catalyst_stamp.png';
 import perceptionTrialStamp from '../assets/project_stamps/perception_trial_stamp.png';
 
 const soundmateImages = loadProjectImages('soundmate');
-const taskNestImages = loadProjectImages('tasknest');
 const callCompanionImages = loadProjectImages('call_companion');
 const bubbleUpImages = loadProjectImages('bubble_up');
 const careerCatalystImages = loadProjectImages('career_catalyst');
@@ -30,35 +28,11 @@ export const projects = [
       'TypeScript, React, Cloudflare Workers, NestJS, Prisma, Supabase, Auth0, Spotify Developer API, Render',
   },
   {
-    id: 'task-nest',
-    stamp: taskNestStamp,
-    title: 'TaskNest',
-    role: 'Individual Developer',
-    links: [
-      {
-        label: 'Live Site',
-        url: 'https://task-dashboard-lilac.vercel.app/',
-      },
-    ],
-    description:
-      'TaskNest is a personal task organization app that helps users separate responsibilities across different areas of life while keeping everything centralized.',
-    images: taskNestImages,
-    concept:
-      'TaskNest started as a 48-hour challenge I gave myself to build something I could actually see myself using. I make a list of to-dos for every workday, and I also wanted more hands-on experience with JavaScript, so it felt like the perfect project.\n\nMy tasks usually span across multiple areas of my life, from working on project write-ups to errands like buying a new pillow. I wanted a cleaner way to organize and categorize those responsibilities!\n\nTaskNest allows users to create separate to-do lists for different areas of their lives while keeping everything centralized in one place. Looking ahead, I’d like to add a unified task view that combines all tasks due for the current day, as well as integrate a database. Right now, tasks are stored using local storage, but a database would allow for persistent storage and access across devices.',
-    type: 'Web App, Task Management Tool',
-    tech: 'JavaScript, React, Next.js, Tailwind CSS, Vercel',
-  },
-  {
     id: 'career-catalyst',
     stamp: careerCatalystStamp,
     title: 'Career Cat-alyst',
     role: 'Frontend Developer',
-    links: [
-      {
-        label: 'Live Site',
-        url: 'https://vikiniki123.github.io/starter_helpi/',
-      },
-    ],
+    links: [],
     description:
       'Career Cat-alyst is an AI-powered career quiz that helps users explore potential career paths based on their interests and preferences.',
     images: careerCatalystImages,
