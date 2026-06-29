@@ -7,13 +7,13 @@ html {
   width: min(100%, 1180px);
   margin: -8rem auto 0;
   padding: 3rem 1rem 5rem;
-  scale: .85;
+  scale: .8;
 }
 
 .contact-banner-wrapper {
   position: relative;
   width: clamp(320px, 65vw, 700px);
-  max-width: 90%;
+  max-width: 50%;
   margin: 0 auto 0.3rem;
   aspect-ratio: 700 / 180;
   left: -1%;
@@ -366,6 +366,7 @@ html {
 @media (max-width: 700px) {
   .contact-section {
     padding: 2.3rem 0.85rem 4rem;
+    margin: -14rem auto 0;
   }
 
   .contact-form-card,
