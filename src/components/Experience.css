@@ -4,17 +4,57 @@ html {
 }
 
 .experience-section {
-  width: min(100%, 1200px);
-  margin: -1rem auto 0;
+  position: relative;
+  width: min(95%, 1200px);
   padding: 0 1rem 3rem;
   text-align: left;
+  margin: 0 auto;
+  overflow: visible;
+  scale: 0.9;
+
+  transform: translateX(75px) rotate(-1.5deg);
+
+  transition:
+    transform 0.8s cubic-bezier(.22,1,.36,1);
+}
+
+.experience-section:hover {
+    transform: translateX(0) rotate(0deg);
+}
+
+.experience-board {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem 3rem;
+  border-radius: 2rem;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.18)
+    ),
+    var(--corkboard);
+  background-size: 350px;
+  background-repeat: repeat;
+  background-position: center;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+.experience-board::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
 }
 
 .experience-banner-wrapper {
   position: relative;
   width: clamp(320px, 65vw, 700px);
   max-width: 90%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 0.5rem;
   aspect-ratio: 700 / 180;
   left: -1%;
 }
@@ -25,26 +65,62 @@ html {
 }
 
 .experience-banner-wrapper .letter-e1 { top: 26%; left: 8%; width: 8.5%; }
-.experience-banner-wrapper .letter-x  { top: 22%; left: 17%; width: 8.5%; }
-.experience-banner-wrapper .letter-p  { top: 25%; left: 26%; width: 8.5%; }
+.experience-banner-wrapper .letter-x { top: 22%; left: 17%; width: 8.5%; }
+.experience-banner-wrapper .letter-p { top: 25%; left: 26%; width: 8.5%; }
 .experience-banner-wrapper .letter-e2 { top: 24%; left: 35%; width: 8.5%; }
-.experience-banner-wrapper .letter-r  { top: 25%; left: 44%; width: 8.5%; }
-.experience-banner-wrapper .letter-i  { top: 20%; left: 50%; width: 9.5%; }
+.experience-banner-wrapper .letter-r { top: 25%; left: 44%; width: 8.5%; }
+.experience-banner-wrapper .letter-i { top: 20%; left: 50%; width: 9.5%; }
 .experience-banner-wrapper .letter-e3 { top: 25%; left: 58%; width: 8.5%; }
-.experience-banner-wrapper .letter-n  { top: 20%; left: 67%; width: 10%; }
-.experience-banner-wrapper .letter-c  { top: 22%; left: 76%; width: 10%; }
+.experience-banner-wrapper .letter-n { top: 20%; left: 67%; width: 10%; }
+.experience-banner-wrapper .letter-c { top: 22%; left: 76%; width: 10%; }
 .experience-banner-wrapper .letter-e4 { top: 25%; left: 86%; width: 8.5%; }
 
 .receipt-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(180px, max-content));
+  grid-template-columns: repeat(2, minmax(260px, max-content));
   justify-content: center;
-  gap: 8rem 8rem;
+  gap: 3rem 4rem;
   align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
 .receipt-shell {
-  width: 120%;
+  width: 340px;
+  position: relative;
+}
+
+.receipt-shell:nth-child(1) {
+  transform: rotate(-1.5deg);
+}
+
+.receipt-shell:nth-child(2) {
+  transform: rotate(1.2deg);
+}
+
+.receipt-shell:nth-child(3) {
+  transform: rotate(-0.8deg);
+}
+
+.receipt-shell:nth-child(4) {
+  transform: rotate(1.8deg);
+}
+
+.receipt-shell::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f6a9bc;
+  transform: translateX(-50%);
+  z-index: 5;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.18),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.08),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.45);
 }
 
 .receipt-toggle {
@@ -144,6 +220,10 @@ html {
   padding-top: 0;
 }
 
+.receipt-shell.open {
+  z-index: 10;
+}
+
 .receipt-shell.open .receipt-expand {
   grid-template-rows: 1fr;
   opacity: 1;
@@ -184,30 +264,30 @@ html {
 }
 
 .highlight {
-  color: #d97a9d; 
+  color: #d97a9d;
   font-weight: 700;
 }
 
 @keyframes flutter-a {
-  0%   { transform: translate(0px, 0px) rotate(0deg); }
-  25%  { transform: translate(-1px, 1px) rotate(-2deg); }
-  50%  { transform: translate(1px, -1px) rotate(1deg); }
-  75%  { transform: translate(0px, 1px) rotate(-1deg); }
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(-1px, 1px) rotate(-2deg); }
+  50% { transform: translate(1px, -1px) rotate(1deg); }
+  75% { transform: translate(0px, 1px) rotate(-1deg); }
   100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
 @keyframes flutter-b {
-  0%   { transform: translate(0px, 0px) rotate(0deg); }
-  20%  { transform: translate(1px, 0px) rotate(1deg); }
-  50%  { transform: translate(-1px, 1px) rotate(-2deg); }
-  80%  { transform: translate(1px, -1px) rotate(2deg); }
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(1px, 0px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-2deg); }
+  80% { transform: translate(1px, -1px) rotate(2deg); }
   100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
 @keyframes flutter-c {
-  0%   { transform: translate(0px, 0px) rotate(0deg); }
-  30%  { transform: translate(0px, -1px) rotate(2deg); }
-  60%  { transform: translate(-1px, 1px) rotate(-1deg); }
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  30% { transform: translate(0px, -1px) rotate(2deg); }
+  60% { transform: translate(-1px, 1px) rotate(-1deg); }
   100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
@@ -223,36 +303,70 @@ html {
   animation: flutter-c 2.5s ease-in-out infinite;
 }
 
-/* responsive: tablet */
 @media (max-width: 980px) {
   .receipt-grid {
-    grid-template-columns: repeat(2, minmax(180px, max-content));
+    grid-template-columns: repeat(2, minmax(220px, max-content));
+    gap: 2.5rem 2rem;
+  }
+
+  .receipt-shell {
+    width: 290px;
   }
 }
 
 @media (max-width: 768px) {
   .experience-section {
     padding: 0 0.75rem 2.5rem;
+    transform: translateX(0px) rotate(-0deg);
   }
 
   .experience-banner-wrapper {
     width: clamp(280px, 78vw, 560px);
   }
+
+  .experience-board {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .receipt-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
-/* responsive: mobile */
 @media (max-width: 600px) {
   .experience-section {
     margin: 0 auto 0;
+    transform: translateX(0px) rotate(0deg);
   }
+
+  .experience-board {
+    padding: 2rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .experience-board::before {
+    inset: 8px;
+    border-radius: 1rem;
+  }
+
   .receipt-grid {
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .receipt-shell {
     display: block;
     width: 250px;
-    margin: 0 auto 1rem !important;
+    margin: 0 auto !important;
+  }
+
+  .receipt-shell:nth-child(1),
+  .receipt-shell:nth-child(2),
+  .receipt-shell:nth-child(3),
+  .receipt-shell:nth-child(4) {
+    transform: none;
   }
 
   .receipt-shell:last-child {
