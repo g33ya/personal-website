@@ -10,7 +10,7 @@
   position: fixed;  
   inset: 0;
 
-  background: url("/repeating_sketch_background.png") repeat;
+  background: url("../assets/repeating_sketch_background.png") repeat;
   background-size: 260px;
 
   opacity: 0.2;
