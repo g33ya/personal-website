@@ -73,7 +73,16 @@ export default function ProjectPage() {
   const { projectId } = useParams();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      const projectScroll = document.querySelector(".project-scroll");
+      if (projectScroll) {
+        projectScroll.scrollTop = 0;
+      }
+    });
   }, [projectId]);
 
   const currentIndex = projects.findIndex((project) => project.id === projectId);
@@ -84,7 +93,7 @@ export default function ProjectPage() {
       <main className="project-page">
         <section className="project-missing">
           <h1>Project not found</h1>
-          <Link to="/" className="back-link">
+          <Link to="/#projects" className="back-link">
             ← home
           </Link>
         </section>
@@ -103,7 +112,7 @@ export default function ProjectPage() {
     <main className="project-page">
       <section className="project-layout">
         <div className="project-top">
-          <Link to="/" className="back-link">
+          <Link to="/#projects" className="back-link">
             ← home
           </Link>
         </div>
