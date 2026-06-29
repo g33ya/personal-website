@@ -1,6 +1,6 @@
 import letterAssets from "../utils/letterAssets";
 import "./Projects.css";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 
@@ -13,15 +13,6 @@ const letters = [
   { key: "greenWhiteC", alt: "C", className: "letter-c flutter-c" },
   { key: "greenWhiteT", alt: "T", className: "letter-t flutter-a" },
   { key: "greenWhiteS", alt: "S", className: "letter-s flutter-b" },
-];
-
-const tilts = [
-  "tilt-left-1",
-  "tilt-right-1",
-  "tilt-left-2",
-  "tilt-right-2",
-  "tilt-left-3",
-  "tilt-right-3",
 ];
 
 function ProjectsBanner() {
@@ -39,56 +30,76 @@ function ProjectsBanner() {
   );
 }
 
-export default function Projects() {
-  const [flippedId, setFlippedId] = useState(null);
+function getCircularOffset(index, activeIndex, total) {
+  let offset = index - activeIndex;
 
-  const handleFlip = (id) => {
-    setFlippedId((prev) => (prev === id ? null : id));
-  };
+  if (offset > total / 2) offset -= total;
+  if (offset < -total / 2) offset += total;
+
+  return offset;
+}
+
+export default function Projects() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeProject = projects[activeIndex];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % projects.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const visibleProjects = useMemo(() => {
+    return projects.map((project, index) => ({
+      ...project,
+      offset: getCircularOffset(index, activeIndex, projects.length),
+      originalIndex: index,
+    }));
+  }, [activeIndex]);
 
   return (
     <section id="projects" className="projects-section">
+      <div className="airmail-left" />
+      <div className="airmail-right" />
+      <div className="airmail-stamp">AIR MAIL</div>
+
       <div className="projects-title-wrap">
         <ProjectsBanner />
       </div>
 
-      <div className="projects-grid">
-        {projects.map((project, index) => {
-          const isFlipped = flippedId === project.id;
+      <div className="projects-carousel" aria-label="Featured projects carousel">
+        {visibleProjects.map((project) => {
+          const isActive = project.offset === 0;
 
           return (
             <button
               key={project.id}
               type="button"
-              className={`project-card ${tilts[index % tilts.length]} ${
-                isFlipped ? "is-flipped" : ""
-              }`}
-              onClick={() => handleFlip(project.id)}
-              aria-pressed={isFlipped}
-              aria-label={`${project.title} preview card`}
+              className={`project-stamp ${isActive ? "is-active" : "is-side"}`}
+              style={{
+                "--offset": project.offset,
+                "--abs-offset": Math.abs(project.offset),
+              }}
+              onClick={() => setActiveIndex(project.originalIndex)}
+              aria-label={`View ${project.title}`}
+              aria-pressed={isActive}
             >
-              <div className="project-card-inner">
-                <div className="project-card-face project-card-front">
-                  <img src={project.stamp} alt={project.title} />
-                  <span className="project-front-note">tap for preview</span>
-                </div>
-
-                <div className="project-card-face project-card-back">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="project-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    view project →
-                  </Link>
-                </div>
-              </div>
+              <img src={project.stamp} alt={project.title} />
             </button>
           );
         })}
+      </div>
+
+      <div className="featured-project-card">
+        <p className="featured-label">currently featured</p>
+        <h3>{activeProject.title}</h3>
+        <p>{activeProject.description}</p>
+
+        <Link to={`/projects/${activeProject.id}`} className="project-link">
+          view project →
+        </Link>
       </div>
     </section>
   );
