@@ -34,10 +34,9 @@ export default function Home() {
                   Available {currentMonth} 2026
                 </div>
                 <p>
-                  Hi! My name is Gia and I am a student at UD. I'm going to add
-                  an actual description here eventually, but for now i'll just fill
-                  the space. 
-                  <br /> <br />will need to figure out how to keep this responsive. sigh
+                  hi! i'm gia, a u.delaware grad and software engineer with a passion for creating user-centered experiences. through internships
+                  and personal projects, i've developed a love for building software that balances design with functionality. i love 
+                  turning ideas into intuitive interfaces and bringing them to life through code, learning new technologies along the way!
                 </p>
 
                 <div className="intro-links">

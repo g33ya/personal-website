@@ -87,15 +87,14 @@
 
 .intro-note {
   position: absolute;
-  left: 4%;
-  top: 20%;
+  top: 15%;
   width: 90%;
   z-index: 4;
   text-align: left;
   padding-left: 1.25rem;
   border-left: 4px solid rgba(90, 90, 90, 0.5);
   overflow-wrap: break-word;
-  scale: .80;
+  scale: .7;
 }
 
 .intro-note p {
@@ -113,7 +112,7 @@
 
 .scrapbook-link {
   text-decoration: none;
-  font-size: clamp(0.85rem, 1.1vw, 1.02rem);
+  font-size: clamp(1rem, 1.1vw, 1.02rem);
   font-weight: 700;
   color: #6a0943;
   transition: transform 0.15s ease;
@@ -192,10 +191,11 @@
 
   .intro-note {
     left: 6%;
-    top: 20%;
+    top: 24%;
     width: 80%;
     padding-left: 1rem;
     border-left: 4px solid rgba(90, 90, 90, 0.5);
+    scale: .9;
   }
 
   .intro-note p {
@@ -350,6 +350,8 @@
   .availability-pill {
     font-size: 0.62rem;
     padding: 0.28rem 0.5rem;
+    scale: .8;
+    margin-left: -1.5rem;
   }
 
   .availability-dot {
