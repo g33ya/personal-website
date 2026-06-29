@@ -1,69 +1,70 @@
-import { useEffect, useRef, useState } from 'react'
-import './Navbar.css'
+import { useEffect, useRef, useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import "./Navbar.css";
 
 const navItems = [
-  { id: 'about', label: 'about me' },
-  { id: 'experience', label: 'experience' },
-  { id: 'projects', label: 'projects' },
-  { id: 'skills', label: 'skills' },
-  { id: 'contact', label: 'contact!' },
-]
+  { id: "about", label: "about me" },
+  { id: "experience", label: "experience" },
+  { id: "projects", label: "projects" },
+  { id: "skills", label: "skills" },
+  { id: "contact", label: "contact!" },
+];
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('about')
-  const navRef = useRef(null)
+  const [activeSection, setActiveSection] = useState("about");
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '')
+      const hash = window.location.hash.replace("#", "");
       if (hash) {
-        setActiveSection(hash)
+        setActiveSection(hash);
       }
-    }
+    };
 
-    handleHashChange()
-    window.addEventListener('hashchange', handleHashChange)
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
 
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   useEffect(() => {
     const sections = navItems
       .map((item) => document.getElementById(item.id))
-      .filter(Boolean)
+      .filter(Boolean);
 
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
         if (visibleSections.length > 0) {
-          setActiveSection(visibleSections[0].target.id)
+          setActiveSection(visibleSections[0].target.id);
         }
       },
       {
         root: null,
-        rootMargin: '-15% 0px -55% 0px',
+        rootMargin: "-15% 0px -55% 0px",
         threshold: 0.05,
       }
-    )
+    );
 
-    sections.forEach((section) => observer.observe(section))
+    sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    const activeLink = navRef.current?.querySelector('.navbar-link.active')
+    const activeLink = navRef.current?.querySelector(".navbar-link.active");
     if (activeLink) {
       activeLink.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest',
-      })
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
     }
-  }, [activeSection])
+  }, [activeSection]);
 
   return (
     <div className="navbar-shell">
@@ -72,13 +73,25 @@ export default function Navbar() {
           <a
             key={item.id}
             href={`#${item.id}`}
-            className={`navbar-link ${activeSection === item.id ? 'active' : ''}`}
+            className={`navbar-link ${
+              activeSection === item.id ? "active" : ""
+            }`}
             onClick={() => setActiveSection(item.id)}
           >
             {item.label}
           </a>
         ))}
+
+        <a
+          href="https://github.com/g33ya"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
       </nav>
     </div>
-  )
+  );
 }

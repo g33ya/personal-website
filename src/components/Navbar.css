@@ -59,7 +59,25 @@ html {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
-/* responsive: mobile */
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c352f;
+  font-size: 1.45rem;
+  text-decoration: none;
+  flex: 0 0 auto;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.github-link:hover {
+  color: #b86f79;
+  transform: translateY(-2px) rotate(-6deg) scale(1.06);
+}
+
 @media (max-width: 600px) {
   .navbar-shell {
     top: 0.65rem;
