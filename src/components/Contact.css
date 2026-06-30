@@ -369,6 +369,13 @@ html {
     margin: -14rem auto 0;
   }
 
+  .contact-banner-wrapper {
+    width: clamp(280px, 90vw, 500px);
+    max-width: 100%;
+    margin-bottom: 0.2rem;
+    aspect-ratio: 500 / 180;
+  }
+
   .contact-form-card,
   .contact-info-card {
     padding: 2rem 1rem 1.1rem;

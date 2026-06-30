@@ -340,6 +340,12 @@ html {
     transform: translateX(0px) rotate(0deg);
   }
 
+  .experience-banner-wrapper {
+    width: clamp(280px, 90vw, 420px);
+    margin-bottom: 0.5rem;
+    scale: 1.1;
+  }
+
   .experience-board {
     padding: 2rem 1rem;
     border-radius: 1.25rem;

@@ -89,7 +89,7 @@ html {
   letter-spacing: 0.18em;
   transform: rotate(8deg);
   opacity: 0.68;
-  z-index: 3;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -131,7 +131,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: -0.25rem auto 1.5rem;
-  z-index: 4;
+  z-index: 1;
   scale: 1.2;
 }
 
@@ -290,6 +290,12 @@ html {
     transform: translateX(0px) rotate(0deg);
   }
 
+  .projects-banner-wrapper {
+    width: clamp(280px, 90vw, 420px);
+    margin-bottom: 0.5rem;
+    scale: 1.1;
+  }
+
   .airmail-stamp {
     top: 2.4rem;
     right: 2.2rem;
@@ -355,7 +361,7 @@ html {
   .projects-banner-wrapper {
     width: clamp(280px, 90vw, 420px);
     margin-bottom: 0;
-    left: 1%;
+    scale: 1.1;
   }
 
   .projects-carousel {

@@ -313,8 +313,8 @@ html {
   .skills-banner-wrapper {
     width: clamp(280px, 88vw, 420px);
     margin-bottom: 1rem;
-    margin-top: 1rem;
-    scale: 1.2;
+    margin-top: 2rem;
+    scale: 1.5;
   }
 
   .skills-grid {
@@ -323,7 +323,7 @@ html {
 
   .skill-card {
     width: 100%;
-    aspect-ratio: 640 / 375;
+    aspect-ratio: 600 / 475;
   }
 
   .skill-card::before {
