@@ -1,8 +1,8 @@
 import './AboutMe.css'
-import NameBanner from './NameBanner'
-import pinkPolaroid from '../assets/cami_and_me.png'
-import greenPolaroid from '../assets/solo_photo.png'
-import plaidPaperCutout from '../assets/plaid_paper_cutout.png'
+import NameBanner from '../NameBanner/NameBanner'
+import pinkPolaroid from '../../assets/cami_and_me.png'
+import greenPolaroid from '../../assets/solo_photo.png'
+import plaidPaperCutout from '../../assets/plaid_paper_cutout.png'
 
 const currentMonth = new Date().toLocaleString("en-US", {
   month: "long",

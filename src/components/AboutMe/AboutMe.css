@@ -10,7 +10,7 @@
   position: fixed;  
   inset: 0;
 
-  background: url("../assets/repeating_sketch_background.png") repeat;
+  background: url("../../assets/repeating_sketch_background.png") repeat;
   background-size: 260px;
 
   opacity: 0.2;
@@ -240,15 +240,15 @@
 @media (max-width: 600px) {
   .home-page {
     padding: 0.5rem;
-    min-height: 100vh;
     margin-top: 2rem;
+    min-height: 100vh;
     overflow-x: hidden;
   }
 
   .hero-card {
     padding: 0.75rem;
     border-radius: 18px;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-section {
@@ -264,8 +264,8 @@
   .left-collage {
     position: relative;
     width: 100%;
-    max-width: 390px;
-    min-height: 680px;
+    max-width: 360px;
+    min-height: 600px;
     margin: 0 auto;
     left: 0;
     overflow: visible;
@@ -273,11 +273,11 @@
 
   .plaid-wrap {
     position: absolute;
+    top: 5.5rem;
     left: 50%;
-    top: 6.25rem;
     transform: translateX(-50%);
-    width: 96%;
-    min-height: 520px;
+    width: 102%;
+    min-height: 440px;
     z-index: 1;
   }
 
@@ -285,8 +285,7 @@
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 520px;
-    min-height: 520px;
+    height: 440px;
     object-fit: fill;
     display: block;
   }
@@ -296,78 +295,79 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 390px;
-    z-index: 3;
+    width: 92%;
+    max-width: 340px;
+    z-index: 4;
   }
 
   .name-banner {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
   }
 
   .intro-note {
     position: absolute;
+    top: 9.6rem;
     left: 50%;
-    top: 11rem;
     transform: translateX(-50%);
-    width: 78%;
-    max-width: 300px;
-    padding-left: 0.8rem;
-    border-left: 3px solid rgba(90, 90, 90, 0.5);
+    width: 76%;
+    max-width: 285px;
+
+    padding-left: .8rem;
+    border-left: 3px solid rgba(90,90,90,.5);
+
     scale: 1;
-    z-index: 4;
+    z-index: 5;
   }
 
   .intro-note p {
-    font-size: 0.78rem;
-    line-height: 1.35;
-    margin: 0 0 0.7rem;
-    max-width: 100%;
-    overflow-wrap: break-word;
+    font-size: .68rem;
+    line-height: 1.32;
+    margin-bottom: .65rem;
   }
 
   .intro-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem 0.65rem;
+    gap: .35rem .6rem;
   }
 
   .scrapbook-link {
-    font-size: 0.72rem;
+    font-size: .66rem;
     white-space: nowrap;
   }
 
   .availability-pill {
-    font-size: 0.66rem;
-    padding: 0.32rem 0.55rem;
+    font-size: .58rem;
+    padding: .28rem .5rem;
     scale: 1;
     margin-left: 0;
   }
 
   .availability-dot {
-    width: 0.38rem;
-    height: 0.38rem;
+    width: .35rem;
+    height: .35rem;
   }
 
   .hero-right {
     position: relative;
-    max-width: 390px;
-    min-height: auto;
-    margin: -8.5rem auto 0;
+    max-width: 360px;
+    margin: -6.25rem auto 0;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: .75rem;
+
     z-index: 5;
   }
 
   .polaroid {
     position: relative;
-    width: 38vw;
-    min-width: 115px;
-    max-width: 150px;
+    width: 33vw;
+    min-width: 105px;
+    max-width: 130px;
     height: auto;
     scale: 1;
   }
@@ -376,8 +376,8 @@
   .polaroid-pink {
     top: auto;
     left: auto;
-    bottom: auto;
     right: auto;
+    bottom: auto;
     margin: 0;
   }
 

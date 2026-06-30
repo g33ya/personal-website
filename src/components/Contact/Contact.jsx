@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import letterAssets from "../utils/letterAssets";
+import letterAssets from "../../utils/letterAssets";
 import "./Contact.css";
 
 const letters = [

@@ -1,8 +1,8 @@
-import letterAssets from "../utils/letterAssets";
+import letterAssets from "../../utils/letterAssets";
 import "./Projects.css";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { projects } from "../data/projects";
+import { projects } from "../../data/projects";
 
 const letters = [
   { key: "greenWhiteP", alt: "P", className: "letter-p flutter-a" },

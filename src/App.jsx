@@ -4,13 +4,13 @@ import "lenis/dist/lenis.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
-import AboutMe from "./components/AboutMe";
-import Navbar from "./components/Navbar";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import ProjectPage from "./components/ProjectPage";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Navbar from "./components/NavBar/Navbar";
+import Experience from "./components/Experience/Experience";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import ProjectPage from "./components/ProjectPage/ProjectPage";
 
 function ScrollHandler({ lenisRef }) {
   const { pathname, hash } = useLocation();

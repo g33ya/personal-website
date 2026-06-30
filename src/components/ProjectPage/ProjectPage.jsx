@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { projects } from "../data/projects";
+import { projects } from "../../data/projects";
 import "./ProjectPage.css";
 
 function ProjectCarousel({ project }) {

@@ -1,5 +1,5 @@
-import nameBanner from '../assets/name_banner_transparent.png'
-import letterAssets from "../utils/letterAssets";
+import nameBanner from '../../assets/name_banner_transparent.png'
+import letterAssets from "../../utils/letterAssets";
 import './NameBanner.css'
 
 const letters = [

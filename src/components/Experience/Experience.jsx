@@ -1,7 +1,7 @@
 import { useState } from "react";
-import letterAssets from "../utils/letterAssets";
-import receiptPaper from "../assets/receipt_paper.png";
-import corkboard from "../assets/experience/corkboard.webp";
+import letterAssets from "../../utils/letterAssets";
+import receiptPaper from "../../assets/receipt_paper.png";
+import corkboard from "../../assets/experience/corkboard.webp";
 import "./Experience.css";
 
 const letters = [
