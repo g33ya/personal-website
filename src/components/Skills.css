@@ -311,12 +311,14 @@ html {
   .skills-section {
     padding: 0.75rem 0.75rem 3rem;
     transform: translateX(0px) rotate(0deg);
+    margin-top: 1.5rem;
+    width: 94%;
   }
 
   .skills-banner-wrapper {
     width: clamp(280px, 88vw, 420px);
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     scale: 1.5;
   }
 
@@ -326,7 +328,7 @@ html {
 
   .skill-card {
     width: 100%;
-    aspect-ratio: 600 / 475;
+    aspect-ratio: 500 / 475;
   }
 
   .skill-card::before {
@@ -336,11 +338,11 @@ html {
   }
 
   .skill-card-inner {
-    top: 11%;
+    top: 12%;
     left: 9%;
     right: 11%;
     bottom: 13%;
-    transform: scale(0.9);
+    transform: scale(0.85);
     transform-origin: top center;
     overflow: visible;
   }

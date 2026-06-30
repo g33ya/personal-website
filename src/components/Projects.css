@@ -335,6 +335,11 @@ html {
     border-radius: 0.85rem;
     scale: 0.9;
     transform: translateX(0px) rotate(0deg);
+    margin-top: 2rem;
+  }
+
+  .projects-section:hover {
+    transform: none;
   }
 
   .projects-section::before,
