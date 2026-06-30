@@ -334,7 +334,7 @@
 
   .intro-note {
     position: absolute;
-    top: 6rem;
+    top: 5.5rem;
     left: 4%;
     right: 8%;
 
@@ -351,7 +351,7 @@
   }
 
   .intro-note p {
-    font-size: .95rem;
+    font-size: .9rem;
     line-height: 1.32;
     margin-bottom: 0.65rem;
     max-width: 100%;
