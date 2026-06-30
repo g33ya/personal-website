@@ -5,9 +5,12 @@ html {
 
 .contact-section {
   width: min(100%, 1180px);
-  margin: -8rem auto 0;
   padding: 3rem 1rem 5rem;
-  scale: .8;
+
+  transform: scale(.75);
+  transform-origin: top center;
+
+  margin: -18rem auto 0;
 }
 
 .contact-banner-wrapper {
@@ -226,7 +229,6 @@ html {
   font: inherit;
   font-weight: 700;
   padding: 0.92rem 1.4rem;
-  cursor: pointer;
   box-shadow: 0 8px 18px rgba(185, 145, 145, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -237,7 +239,6 @@ html {
 }
 
 .contact-button:disabled {
-  cursor: default;
   opacity: 0.8;
   transform: none;
 }

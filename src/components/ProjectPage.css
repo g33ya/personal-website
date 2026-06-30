@@ -91,7 +91,6 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #3c352f;
-  cursor: pointer;
   box-shadow: 3px 3px 0 rgba(184, 111, 121, 0.25);
   transition:
     transform 0.2s ease,

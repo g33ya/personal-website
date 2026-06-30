@@ -4,11 +4,14 @@ html {
 }
 
 .skills-section {
-  width: min(100%, 1300px);
+  width: min(100%, 1400px);
   margin: 0 auto;
   padding: 1rem 1rem 4rem;
   text-align: left;
-  scale: 0.85;
+  margin-top: -13rem;
+
+  transform: scale(0.7);
+  transform-origin: top center;
 }
 
 .skills-desk {
