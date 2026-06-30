@@ -248,10 +248,11 @@
   .hero-card {
     padding: 0.75rem;
     border-radius: 18px;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .hero-section {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -263,14 +264,16 @@
   .left-collage {
     position: relative;
     width: 100%;
+    max-width: 390px;
     min-height: 680px;
+    margin: 0 auto;
+    left: 0;
     overflow: visible;
-    left: 6%;
   }
 
   .plaid-wrap {
     position: absolute;
-    left: 46%;
+    left: 50%;
     top: 6.25rem;
     transform: translateX(-50%);
     width: 96%;
@@ -279,9 +282,11 @@
   }
 
   .plaid-paper {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    min-height: 520px;
     height: 520px;
+    min-height: 520px;
     object-fit: fill;
     display: block;
   }
@@ -289,9 +294,10 @@
   .banner-layer {
     position: absolute;
     top: 0;
-    left: 55%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 118%;
+    width: 100%;
+    max-width: 390px;
     z-index: 3;
   }
 
@@ -303,9 +309,11 @@
 
   .intro-note {
     position: absolute;
-    left: 9%;
+    left: 50%;
     top: 11rem;
-    width: 82%;
+    transform: translateX(-50%);
+    width: 78%;
+    max-width: 300px;
     padding-left: 0.8rem;
     border-left: 3px solid rgba(90, 90, 90, 0.5);
     scale: 1;
@@ -345,8 +353,9 @@
 
   .hero-right {
     position: relative;
+    max-width: 390px;
     min-height: auto;
-    margin-top: -8.5rem;
+    margin: -8.5rem auto 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -360,6 +369,7 @@
     min-width: 115px;
     max-width: 150px;
     height: auto;
+    scale: 1;
   }
 
   .polaroid-green,
@@ -373,12 +383,10 @@
 
   .polaroid-green {
     --rotation: 5deg;
-    transform: translateY(-10px) rotate(5deg);
   }
 
   .polaroid-pink {
     --rotation: -5deg;
-    transform: translateY(-10px) rotate(-5deg);
   }
 }
 
