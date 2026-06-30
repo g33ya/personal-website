@@ -309,13 +309,14 @@
   .intro-note {
     position: absolute;
     top: 9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 76%;
-    max-width: 285px;
+    left: 2.25rem;
+    transform: none;
 
-    padding-left: .8rem;
-    border-left: 3px solid rgba(90,90,90,.5);
+    width: calc(100% - 4.5rem);
+    max-width: none;
+
+    padding-left: 0.8rem;
+    border-left: 3px solid rgba(90, 90, 90, 0.5);
 
     scale: 1;
     z-index: 5;
@@ -339,10 +340,11 @@
   }
 
   .availability-pill {
-    font-size: .58rem;
-    padding: .28rem .5rem;
+    font-size: 0.58rem;
+    padding: 0.28rem 0.5rem;
     scale: 1;
     margin-left: 0;
+    width: fit-content;
   }
 
   .availability-dot {
