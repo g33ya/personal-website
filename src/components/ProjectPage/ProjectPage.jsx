@@ -121,7 +121,7 @@ export default function ProjectPage() {
           <ProjectCarousel key={project.id} project={project} />
         </aside>
 
-        <article className="project-content">
+        <article className="project-content" data-lenis-prevent>
           <div className="project-scroll">
             <h1>{project.title}</h1>
 
