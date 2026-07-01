@@ -11,6 +11,7 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import ProjectPage from "./components/ProjectPage/ProjectPage";
+import ScrollToHash from "./utils/scrollToHash";
 
 function ScrollHandler({ lenisRef }) {
   const { pathname, hash } = useLocation();
@@ -101,6 +102,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <ScrollHandler lenisRef={lenisRef} />
 
       <Routes>
