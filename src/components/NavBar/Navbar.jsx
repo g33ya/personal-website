@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Navbar.css";
 
 const navItems = [
@@ -90,6 +90,16 @@ export default function Navbar() {
           aria-label="GitHub"
         >
           <FaGithub />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/gscozzaro"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="linkedin-link"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
         </a>
       </nav>
     </div>
