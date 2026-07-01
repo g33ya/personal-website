@@ -341,6 +341,10 @@ html {
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
+  .experience-section:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 600px) {

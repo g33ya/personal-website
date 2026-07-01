@@ -280,6 +280,10 @@ html {
 }
 
 @media (max-width: 900px) {
+  .skills-section {
+    margin-top: 4rem;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;

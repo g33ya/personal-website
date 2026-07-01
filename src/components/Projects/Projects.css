@@ -298,6 +298,11 @@ html {
     width: min(96%, 720px);
     padding: 3.4rem 1.35rem 4rem;
     transform: translateX(0px) rotate(0deg);
+    margin-top: 2rem;
+  }
+
+  .projects-section:hover {
+    transform: none;
   }
 
   .projects-banner-wrapper {
