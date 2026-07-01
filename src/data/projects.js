@@ -51,7 +51,7 @@ export const projects = [
     images: bubbleUpImages,
     concept:
       'Bubble Up was a project I built alongside three other developers as part of an educational game development course. The game is designed to help players better understand and manage imposter syndrome through conversations with customers as a boba shop worker. After work, players manage life as a student. It was the first video game I have worked on! Between character development, dialogue writing, and learning Unity, I had to step outside of my comfort zone and experiment.\n\nI was responsible for designing and implementing the portion of the game that takes place after work. In this section, players must manage their energy and stress levels while completing assignments and daily activities. I enjoyed figuring out the UI and balancing the different gameplay mechanics. For example, activities that reduced stress would also consume energy, meaning players had to make thoughtful decisions about how they spent their time.\n\nOne of my favorite parts of the project was drawing from my own experiences as a college student and translating them into gameplay that felt relatable and realistic. Seeing those ideas come to life in a playable game made this a rewarding project to work on!',
-    type: 'game, educational interactive narrative',
+    type: 'Game, Educational Interactive Narrative',
     tech: 'Unity, C#',
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
     concept:
       'Call Companion was a project I built alongside another developer as part of an assistive technology course. It was one of my favorite classes as it challenged me to think differently about accessibility and how thoughtful design can make technology more inclusive.\n\nCall Companion was designed to act as a digital notebook during phone calls, helping users with limited dexterity or fatigue track key information. The app allows users to record details such as event names, dates, times, and locations through simple button-based interactions. Users can also create custom event names and locations in advance, making information entry faster and more accessible during a call. Users can choose between reminders from the application, or exporting the event to their Google Calendar.\n\nOne of the biggest challenges was designing the app around the legal concerns of recording phone calls. Rather than relying on live call transcripts, we focused on creating an alternative solution that allowed users to capture key information without recording conversations! I enjoyed the challenge of figuring out how to simplify features to create an efficient and easy-to-use app.',
     type: 'Mobile App, Accessibility/Support Tool',
-    tech: 'Flutter, Dart, tech Design, Flutter Local Notifications',
+    tech: 'Flutter, Dart, Tech Design, Flutter Local Notifications',
   },
   {
     id: 'perception-experiment',
