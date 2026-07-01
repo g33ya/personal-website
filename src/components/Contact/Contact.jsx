@@ -44,10 +44,10 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_amrwt3b",
-        "template_5ys5jhi",
+        "service_6j0dsri",
+        "template_pf7i11w",
         formRef.current,
-        "ltxczgmSUNd9PRAAH"
+        "6HOB0rMTk4XRyWQc9"
       );
 
       setStatus("success");
@@ -157,7 +157,7 @@ export default function Contact() {
             <div
               className="quick-links-item"
               onClick={() => {
-                  navigator.clipboard.writeText("gscozzaro2004@gmail.com");
+                  navigator.clipboard.writeText("giov.scozzaro@gmail.com");
                   setCopied(true);
                   setTimeout(() => setCopied(false), 1500);
               }}
