@@ -66,8 +66,8 @@ export default function Contact() {
       <div className="contact-heading">
         <p className="contact-kicker">let’s connect!</p>
         <p className="contact-subtitle">
-          Whether you want to talk about projects, opportunities, or just say hi,
-          I’d love to hear from you :D
+          whether you want to talk about projects, opportunities, or just say hi,
+          i’d love to hear from you.
         </p>
       </div>
 
