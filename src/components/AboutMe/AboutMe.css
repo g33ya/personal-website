@@ -189,6 +189,69 @@
   margin-top: clamp(0.45rem, 1.4vw, 0.8rem);
 }
 
+/* LARGER MONITORS */
+@media (min-width: 1800px) {
+  .hero-card {
+    max-width: 1450px;
+  }
+
+  .hero-section {
+    grid-template-columns: 3.2fr 1fr;
+    gap: 2rem;
+  }
+
+  .left-collage {
+    width: min(100%, 950px);
+    min-height: 680px;
+    left: 6%;
+  }
+
+  .plaid-wrap {
+    width: 95%;
+    top: 7.5rem;
+  }
+
+  .banner-layer {
+    width: 60%;
+    top: -14%;
+  }
+
+  .intro-note {
+    top: 20%;
+    left: 5%;
+    width: 82%;
+    scale: 0.82;
+  }
+
+  .intro-note p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .scrapbook-link {
+    font-size: 1.05rem;
+  }
+
+  .hero-right {
+    min-height: 560px;
+  }
+
+  .polaroid {
+    width: clamp(220px, 15vw, 300px);
+    scale: 0.9;
+  }
+
+  .polaroid-green {
+    top: 14%;
+    left: -10%;
+  }
+
+  .polaroid-pink {
+    bottom: -22%;
+    left: -35%;
+  }
+}
+
 /* TABLET */
 @media (min-width: 601px) and (max-width: 900px) {
   .hero-section {

@@ -282,6 +282,17 @@ html {
   outline: none;
 }
 
+@media (min-width: 1800px) {
+  .projects-section {
+    transform: translateX(-100px) rotate(1.5deg) scale(.6);
+    margin-top: 2rem;
+  }
+
+  .projects-section:hover {
+    transform: translateX(0) rotate(0deg) scale(.6);
+  }
+}
+
 @media (max-width: 768px) {
   .projects-section {
     width: min(96%, 720px);

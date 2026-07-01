@@ -302,6 +302,16 @@ html {
   animation: flutter-c 2.5s ease-in-out infinite;
 }
 
+@media (min-width: 1800px) {
+  .experience-section {
+    transform: translateX(100px) rotate(-1.5deg) scale(.9);
+    margin-top: -2rem;
+  }
+
+  .experience-section:hover {
+    transform: translateX(0) rotate(0deg) scale(.9);
+  }
+}
 @media (max-width: 980px) {
   .receipt-grid {
     grid-template-columns: repeat(2, minmax(220px, max-content));
